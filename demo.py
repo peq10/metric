@@ -83,11 +83,11 @@ ax[0].plot(t, f, label = 'Noiseless')
 legend = ax[0].legend(loc='best', bbox_to_anchor=(1,1))
 
 # plot true and estimated spikes
-marker, stem, base = ax[1].stem(t_k, 1 + a_k, color = true_col, label = 'True spike train', markerfmt='x', bottom = 1)
+marker, stem, base = ax[1].stem(t_k, 1 + a_k, linefmt = 'k', label = 'True spike train', markerfmt='x', bottom = 1)
 plt.setp(marker, 'color', true_col)
 plt.setp(stem, 'color', true_col)
 plt.setp(base, 'color', true_col)
-marker, stem, base = ax[1].stem(tt_k, np.ones(tt_k.shape), color = est_col, label = 'Estimated spike train', markerfmt='x', bottom = 0)
+marker, stem, base = ax[1].stem(tt_k, np.ones(tt_k.shape), linefmt = 'r', label = 'Estimated spike train', markerfmt='x', bottom = 0)
 plt.setp(marker, 'color', est_col)
 plt.setp(stem, 'color', est_col)
 plt.setp(base, 'color', est_col)
